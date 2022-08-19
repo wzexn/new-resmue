@@ -9,7 +9,12 @@ body {
     list-style: none;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: normal;
 }
 
@@ -35,19 +40,21 @@ li>a {
     outline: red solid 10px;
 } */
 
-[data-x].offset{
+[data-x].offset {
     transform: translateY(100px);
 }
-[data-x]{
+
+[data-x] {
     transform: translateY(0);
     transition: all 0.5s;
 }
 
-@keyframes slideUp{
-    0%{
+@keyframes slideUp {
+    0% {
         transform: translateY(-30px);
     }
-    100%{
+
+    100% {
         transform: translateY(0);
     }
 }
@@ -66,9 +73,10 @@ li>a {
     transition: all 0.5s;
 }
 
-.topNavBar.sticky{
+.topNavBar.sticky {
     background: rgb(255, 255, 255);
-    padding: 12.5px 40px 12.5px 0 ;  /* padding上右下左 */
+    padding: 12.5px 40px 12.5px 0;
+    /* padding上右下左 */
     z-index: 1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     color: #3d4451;
@@ -89,8 +97,8 @@ li>a {
 }
 
 
-li.active >a::after,
-li.highlight >a::after {
+li.active>a::after,
+li.highlight>a::after {
     content: '';
     display: block;
     position: absolute;
@@ -101,45 +109,50 @@ li.highlight >a::after {
     height: 3px;
     animation: menuSlide 0.3s;
 }
-@keyframes  menuSlide{
-    0%{
+
+@keyframes menuSlide {
+    0% {
         width: 0;
     }
-    100%{
+
+    100% {
         width: 100%;
     }
 }
 
 
 
-.submenu{
+.submenu {
     display: none;
     position: absolute;
     right: 0;
     top: 100%;
     color: #3d4451;
-    background: white;  
+    background: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-.topNavBar li.active> .submenu{
-    display: block;    
+
+.topNavBar li.active>.submenu {
+    display: block;
     animation: submenuSlide .3s;
 }
 
-@keyframes submenuSlide{
-    0%{
-       margin-right :100%;
+@keyframes submenuSlide {
+    0% {
+        margin-right: 100%;
     }
-    100%{
-        margin-right:0%;    ;
+
+    100% {
+        margin-right: 0%;
+        ;
     }
 }
 
 
 
-.submenu >li{
+.submenu>li {
     white-space: nowrap;
-    padding: 5px 10px ;
+    padding: 5px 10px;
 }
 
 a {
@@ -367,6 +380,7 @@ h3 {
     margin-right: auto;
     text-align: center;
     margin-bottom: 100px;
+    max-width: 720px;
 }
 
 .zpk {
@@ -431,6 +445,35 @@ h3 {
     position: relative;
 }
 
-.big,.small {
+.big,
+.small {
     position: absolute;
+}
+
+.swiper {
+    width: 668px;
+    height: 501px;
+}
+
+.swiper-slide {
+    background: white;
+}
+
+
+.swiper-button-prev {
+    background-color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    right: 100%;
+    left: auto;
+}
+
+.swiper-button-next {
+    background-color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    left: 100%;
+    right: auto;
 }
